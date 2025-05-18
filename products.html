@@ -1,0 +1,430 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Our Products - Uwezo Poultry Farm</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&family=Playfair+Display:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="css/products.css">
+    <style>
+       /* Header Styles */
+header {
+    background-color: rgba(255, 255, 255, 0.95);
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+    position: relative;
+    width: 100%;
+    z-index: 1000;
+    transition: all 0.3s ease;
+}
+
+header.scrolled {
+    background-color: white;
+    box-shadow: 0 5px 20px rgba(0, 0, 0, 0.15);
+}
+
+.header-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 15px 0;
+}
+
+.logo {
+    font-family: 'Playfair Display', serif;
+    font-size: 28px;
+    font-weight: 700;
+    color: var(--primary);
+    text-decoration: none;
+    display: flex;
+    align-items: center;
+}
+
+.logo img {
+    height: 40px; /* Adjust as needed */
+    margin-right: 10px;
+}
+
+.logo span {
+    color: var(--dark);
+}
+
+.open-btn {
+    font-size: 1.8rem;
+    cursor: pointer;
+    color: var(--primary);
+    background: none;
+    border: none;
+    transition: transform 0.3s;
+}
+
+.open-btn:hover {
+    transform: scale(1.1);
+}
+
+/* Sidebar Navigation */
+.sidebar {
+    height: 100%;
+    width: 0;
+    position: fixed;
+    z-index: 1001;
+    top: 0;
+    right: 0;
+    background-color: var(--primary);
+    overflow-x: hidden;
+    transition: 0.5s;
+    padding-top: 80px;
+}
+
+.sidebar a {
+    padding: 15px 25px;
+    text-decoration: none;
+    font-size: 1.2rem;
+    color: white;
+    display: block;
+    transition: 0.3s;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+    position: relative;
+    overflow: hidden;
+}
+
+.sidebar a::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: -100%;
+    width: 100%;
+    height: 100%;
+    background: rgba(255, 255, 255, 0.1);
+    transition: 0.5s;
+}
+
+.sidebar a:hover::before {
+    left: 0;
+}
+
+.sidebar .close-btn {
+    position: absolute;
+    top: 20px;
+    right: 25px;
+    font-size: 2rem;
+    color: white;
+    background: none;
+    border: none;
+    cursor: pointer;
+}
+
+/* Page Banner */
+.page-banner {
+    height: 700px;
+    background: linear-gradient(rgba(0, 0, 0, 0.1), rgba(0, 0, 0, 0.9)), url('images/chicks.jpg') center/cover no-repeat;
+    display: flex;
+    align-items: center;
+    text-align: center;
+    color: white;
+}
+
+.page-banner h1 {
+    font-size: 3.5rem;
+    margin-bottom: 20px;
+    animation: fadeInUp 1s ease;
+}
+
+.breadcrumb {
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+}
+
+.breadcrumb a {
+    color: white;
+    text-decoration: none;
+    transition: color 0.3s;
+}
+
+.breadcrumb a:hover {
+    color: var(--accent);
+}
+
+.breadcrumb span {
+    color: var(--accent);
+}
+    </style>
+</head>
+<body>
+    <!-- Header -->
+    <header id="header">
+        <div class="container header-container">
+            <a href="index.html" class="logo">
+                <img src="images/logo.png" alt="Uwezo Poultry Farm Logo" style="height: 40px; margin-right: 10px;">
+                Uwezo <span>Poultry Farm</span>
+            </a>
+            <button class="open-btn" onclick="openNav()"><i class="fas fa-bars"></i></button>
+        </div>
+    </header>
+
+    <!-- Sidebar Navigation -->
+    <div id="sidebar" class="sidebar">
+        <button class="close-btn" onclick="closeNav()">&times;</button>
+        <a href="index.html">Home</a>
+        <a href="about.html">About Us</a>
+        <a href="products.html">Our Products</a>
+        <a href="contact.html">Contact Us</a>
+    </div>
+
+    <!-- Page Banner -->
+    <section class="page-banner">
+        <div class="container">
+            <h1>Our Premium Products</h1>
+            <div class="breadcrumb">
+                <a href="index.html">Home</a>
+                <span>/</span>
+                <a href="products.html">Products</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Products Section -->
+    <section class="products-main">
+        <div class="container">
+            <div class="section-title">
+                <h2>Farm Fresh Poultry</h2>
+                <p>All our products come from chickens raised in spacious, clean environments with access to outdoor areas</p>
+            </div>
+
+            <div class="products-filter">
+                <button class="filter-btn active" data-filter="all">All Products</button>
+                <button class="filter-btn" data-filter="eggs">Eggs</button>
+                <button class="filter-btn" data-filter="meat">Meat</button>
+                <button class="filter-btn" data-filter="specialty">Specialty</button>
+            </div>
+
+            <div class="products-grid">
+                <div class="product-card" data-category="eggs">
+                    <div class="product-img">
+                        <img src="https://images.unsplash.com/photo-1551524559-8af4e6624178?ixlib=rb-1.2.1&auto=format&fit=crop&w=1350&q=80" alt="Fresh Eggs">
+                        <span class="product-badge">Best Seller</span>
+                    </div>
+                    <div class="product-content">
+                        <h3>Free-Range Eggs</h3>
+                        <p>Our free-range eggs come from hens that roam freely and eat a natural diet, resulting in eggs with rich, golden yolks and superior taste.</p>
+                        <div class="product-price">
+                            <span class="price">$4.99/dozen</span>
+                            <button class="add-to-cart">
+                                <i class="fas fa-shopping-cart"></i> Order
+                            </button>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="product-card" data-category="meat">
+                    <div class="product-img">
+                        <img src="https://images.unsplash.com/photo-1607619056574-7b8d3ee536b2?ixlib=rb-1.2.1&auto=format&fit=crop&w=1350&q=80" alt="Whole Chicken">
+                    </div>
+                    <div class="product-content">
+                        <h3>Whole Chicken</h3>
+                        <p>Our whole chickens are processed humanely and air-chilled for better texture and flavor. Perfect for roasting or your favorite recipes.</p>
+                        <div class="product-price">
+                            <span class="price">$3.99/lb</span>
+                            <button class="add-to-cart">
+                                <i class="fas fa-shopping-cart"></i> Order
+                            </button>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="product-card" data-category="meat">
+                    <div class="product-img">
+                        <img src="https://images.unsplash.com/photo-1603133872878-684f208fb84b?ixlib=rb-1.2.1&auto=format&fit=crop&w=1350&q=80" alt="Chicken Parts">
+                    </div>
+                    <div class="product-content">
+                        <h3>Chicken Parts</h3>
+                        <p>Choose from our selection of premium chicken parts including breasts, thighs, wings, and drumsticks - all from our free-range birds.</p>
+                        <div class="product-price">
+                            <span class="price">$5.49/lb</span>
+                            <button class="add-to-cart">
+                                <i class="fas fa-shopping-cart"></i> Order
+                            </button>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="product-card" data-category="eggs">
+                    <div class="product-img">
+                        <img src="https://images.unsplash.com/photo-1587486913049-53fc88980cfc?ixlib=rb-1.2.1&auto=format&fit=crop&w=1350&q=80" alt="Organic Eggs">
+                        <span class="product-badge">Organic</span>
+                    </div>
+                    <div class="product-content">
+                        <h3>Organic Eggs</h3>
+                        <p>Certified organic eggs from hens fed an organic diet and raised without antibiotics or hormones. The healthiest choice for your family.</p>
+                        <div class="product-price">
+                            <span class="price">$6.99/dozen</span>
+                            <button class="add-to-cart">
+                                <i class="fas fa-shopping-cart"></i> Order
+                            </button>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="product-card" data-category="specialty">
+                    <div class="product-img">
+                        <img src="https://images.unsplash.com/photo-1607619056574-7b8d3ee536b2?ixlib=rb-1.2.1&auto=format&fit=crop&w=1350&q=80" alt="Heritage Chicken">
+                        <span class="product-badge">Limited</span>
+                    </div>
+                    <div class="product-content">
+                        <h3>Heritage Chicken</h3>
+                        <p>Our heritage breed chickens offer superior flavor and texture. Raised slowly for maximum taste development. Available seasonally.</p>
+                        <div class="product-price">
+                            <span class="price">$8.99/lb</span>
+                            <button class="add-to-cart">
+                                <i class="fas fa-shopping-cart"></i> Order
+                            </button>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="product-card" data-category="specialty">
+                    <div class="product-img">
+                        <img src="https://images.unsplash.com/photo-1603133872878-684f208fb84b?ixlib=rb-1.2.1&auto=format&fit=crop&w=1350&q=80" alt="Chicken Sausage">
+                        <span class="product-badge">New</span>
+                    </div>
+                    <div class="product-content">
+                        <h3>Chicken Sausage</h3>
+                        <p>Our artisan chicken sausages are made with premium cuts of meat and natural seasonings. Available in three delicious flavors.</p>
+                        <div class="product-price">
+                            <span class="price">$7.99/pkg</span>
+                            <button class="add-to-cart">
+                                <i class="fas fa-shopping-cart"></i> Order
+                            </button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Testimonials -->
+    <section class="testimonials">
+        <div class="container">
+            <div class="section-title">
+                <h2>What Our Customers Say</h2>
+            </div>
+            <div class="testimonials-grid">
+                <div class="testimonial-card">
+                    <p class="testimonial-text">"Uwezo's free-range eggs are the best I've ever tasted. The yolks are so rich and golden - you can really taste the difference!"</p>
+                    <div class="testimonial-author">
+                        <div class="author-img">
+                            <img src="https://randomuser.me/api/portraits/women/32.jpg" alt="Sarah K.">
+                        </div>
+                        <div class="author-info">
+                            <h4>Sarah K.</h4>
+                            <p>Regular Customer</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="testimonial-card">
+                    <p class="testimonial-text">"As a restaurant owner, I appreciate the consistent quality of Uwezo's poultry products. My customers can taste the difference."</p>
+                    <div class="testimonial-author">
+                        <div class="author-img">
+                            <img src="https://randomuser.me/api/portraits/men/45.jpg" alt="James M.">
+                        </div>
+                        <div class="author-info">
+                            <h4>James M.</h4>
+                            <p>Chef & Restaurant Owner</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="testimonial-card">
+                    <p class="testimonial-text">"Knowing my family is eating chicken raised without antibiotics or hormones gives me peace of mind. Thank you Uwezo Farm!"</p>
+                    <div class="testimonial-author">
+                        <div class="author-img">
+                            <img src="https://randomuser.me/api/portraits/women/68.jpg" alt="Amina W.">
+                        </div>
+                        <div class="author-info">
+                            <h4>Amina W.</h4>
+                            <p>Health-Conscious Mom</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Call to Action -->
+    <section class="cta">
+        <div class="container">
+            <h2>Ready to Taste the Difference?</h2>
+            <p>Join our growing family of satisfied customers who appreciate the quality and care that goes into every product we offer.</p>
+            <div class="cta-btns">
+                <a href="contact.html" class="btn primary-btn">Order Now</a>
+                <a href="about.html" class="btn secondary-btn">Learn About Our Farm</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-col">
+                    <h3>About Uwezo</h3>
+                    <p>Uwezo Poultry Farm is committed to providing the highest quality poultry products through sustainable farming practices that prioritize animal welfare and environmental stewardship.</p>
+                    <div class="social-links">
+                        <a href="#"><i class="fab fa-facebook-f"></i></a>
+                        <a href="#"><i class="fab fa-twitter"></i></a>
+                        <a href="#"><i class="fab fa-instagram"></i></a>
+                        <a href="#"><i class="fab fa-youtube"></i></a>
+                    </div>
+                </div>
+                <div class="footer-col">
+                    <h3>Quick Links</h3>
+                    <ul class="quick-links">
+                        <li><a href="index.html"><i class="fas fa-chevron-right"></i> Home</a></li>
+                        <li><a href="about.html"><i class="fas fa-chevron-right"></i> About Us</a></li>
+                        <li><a href="products.html"><i class="fas fa-chevron-right"></i> Our Products</a></li>
+                        <li><a href="contact.html"><i class="fas fa-chevron-right"></i> Contact Us</a></li>
+                        <li><a href="#"><i class="fas fa-chevron-right"></i> Farm Tours</a></li>
+                        <li><a href="#"><i class="fas fa-chevron-right"></i> Recipes</a></li>
+                    </ul>
+                </div>
+                <div class="footer-col">
+                    <h3>Contact Info</h3>
+                    <ul class="contact-info-footer">
+                        <li>
+                            <i class="fas fa-map-marker-alt"></i>
+                            <span class="contact-text-footer">123 Farm Road, Poultry District<br>Nairobi, Kenya</span>
+                        </li>
+                        <li>
+                            <i class="fas fa-phone-alt"></i>
+                            <span class="contact-text-footer">
+                                <a href="tel:+254712345678">+254 712 345 678</a><br>
+                                <a href="tel:+254723456789">+254 723 456 789</a>
+                            </span>
+                        </li>
+                        <li>
+                            <i class="fas fa-envelope"></i>
+                            <span class="contact-text-footer">
+                                <a href="mailto:info@uwezofarm.com">info@uwezofarm.com</a><br>
+                                <a href="mailto:sales@uwezofarm.com">sales@uwezofarm.com</a>
+                            </span>
+                        </li>
+                    </ul>
+                </div>
+                <div class="footer-col">
+                    <h3>Newsletter</h3>
+                    <p>Subscribe to our newsletter for farm updates, special offers, and poultry care tips.</p>
+                    <form class="newsletter-form">
+                        <input type="email" placeholder="Enter your email">
+                        <button type="submit">Subscribe</button>
+                    </form>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2023 Uwezo Poultry Farm. All Rights Reserved. | Designed with <i class="fas fa-heart" style="color: var(--primary);"></i> for happy chickens</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="js/products.js"></script>
+</body>
+</html>

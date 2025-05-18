@@ -1,0 +1,443 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Home - Uwezo Poultry Farm</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link
+        href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&family=Playfair+Display:wght@400;500;600;700&display=swap"
+        rel="stylesheet">
+        <link rel="stylesheet" href="css/index.css">
+    <style>
+       /* Hero Carousel */
+.hero {
+    height: 900px;
+    position: relative;
+    overflow: hidden;
+}
+
+.carousel {
+    height: 100%;
+    position: relative;
+}
+
+.carousel-inner {
+    height: 100%;
+    position: relative;
+    overflow: hidden;
+}
+
+.carousel-item {
+    height: 100%;
+    width: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    opacity: 0;
+    transition: opacity 1s ease-in-out;
+    background-size: cover;
+    background-position: center;
+}
+
+.carousel-item.active {
+    opacity: 1;
+}
+
+.carousel-item:nth-child(1) {
+    background-image: linear-gradient(rgba(0, 0, 0, 0.1), rgba(0, 0, 0, 0.9)), url('images/about.jpeg') ;
+}
+
+.carousel-item:nth-child(2) {
+    background-image: linear-gradient(rgba(0, 0, 0, 0.1), rgba(0, 0, 0, 0.9)), url('images/chicken.jpg');
+}
+
+.carousel-item:nth-child(3) {
+    background-image: linear-gradient(rgba(0, 0, 0, 0.1), rgba(0, 0, 0, 0.9)), url('images/hens.jpg');
+}
+
+.hero-content {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    text-align: center;
+    color: white;
+    width: 100%;
+    padding: 0 20px;
+    z-index: 10;
+}
+
+.hero-content h1 {
+    font-size: 3.5rem;
+    margin-bottom: 20px;
+    animation: fadeInUp 1s ease;
+}
+
+.hero-content p {
+    font-size: 1.2rem;
+    margin-bottom: 30px;
+    max-width: 700px;
+    margin-left: auto;
+    margin-right: auto;
+    line-height: 1.6;
+}
+
+.carousel-controls {
+    position: absolute;
+    bottom: 30px;
+    left: 50%;
+    transform: translateX(-50%);
+    display: flex;
+    gap: 10px;
+    z-index: 10;
+}
+
+.carousel-indicator {
+    width: 12px;
+    height: 12px;
+    border-radius: 50%;
+    background-color: rgba(255, 255, 255, 0.5);
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.carousel-indicator.active {
+    background-color: white;
+    transform: scale(1.2);
+}
+    </style>
+</head>
+
+<body>
+    <!-- Header -->
+<header id="header">
+    <div class="container header-container">
+        <a href="index.html" class="logo">
+            <img src="images/logo.png" alt="Uwezo Poultry Farm Logo" style="height: 40px; margin-right: 10px;">
+            Uwezo <span>Poultry Farm</span>
+        </a>
+        <button class="open-btn" onclick="openNav()"><i class="fas fa-bars"></i></button>
+    </div>
+</header>
+
+    <!-- Sidebar Navigation -->
+    <div id="sidebar" class="sidebar">
+        <button class="close-btn" onclick="closeNav()">&times;</button>
+        <a href="index.html">Home</a>
+        <a href="about.html">About Us</a>
+        <a href="products.html">Our Products</a>
+        <a href="contact.html">Contact Us</a>
+    </div>
+
+    <!-- Hero Carousel -->
+    <section class="hero">
+        <div class="carousel">
+            <div class="carousel-inner">
+                <div class="carousel-item active">
+                    <div class="hero-content">
+                        <h1>Premium Quality Poultry Products</h1>
+                        <p>Experience the difference with our farm-fresh    poultry, raised with care and
+                            sustainable practices for your family's health.</p>
+                        <a href="products.html" class="btn primary-btn">Our Products</a>
+                    </div>
+                </div>
+                <div class="carousel-item">
+                    <div class="hero-content">
+                        <h1>Sustainable Farming Practices</h1>
+                        <p>We're committed to ethical and environmentally friendly poultry farming that benefits both
+                            our customers and the planet.</p>
+                        <a href="about.html" class="btn primary-btn">Learn More</a>
+                    </div>
+                </div>
+                <div class="carousel-item">
+                    <div class="hero-content">
+                        <h1>Farm Fresh Delivered to You</h1>
+                        <p>Order our premium poultry products for assured quality all over the country.</p>
+                        <a href="contact.html" class="btn primary-btn">Order Now</a>
+                    </div>
+                </div>
+            </div>
+            <div class="carousel-controls">
+                <div class="carousel-indicator active" data-index="0"></div>
+                <div class="carousel-indicator" data-index="1"></div>
+                <div class="carousel-indicator" data-index="2"></div>
+            </div>
+        </div>
+    </section>
+
+    <!-- About Section -->
+    <section class="about" id="about">
+        <div class="container">
+            <div class="section-title">
+                <h2>About Our Farm</h2>
+                <p>Discover our commitment to quality and sustainability</p>
+            </div>
+            <div class="about-content">
+                <div class="about-image">
+                    <img src="images/logo.png"
+                        alt="Uwezo Poultry Farm">
+                </div>
+                <div class="about-text">
+                    <h3>Our Story</h3>
+                    <p>Founded in 2010, Uwezo Improved kienyeji Poultry Farm has grown from a small family operation to one of Nairobi's
+                        most trusted sources for premium poultry products. Our name "Uwezo" means "capability" in
+                        Swahili, reflecting our commitment to excellence in everything we do.</p>
+                    
+                    <div class="features">
+                        <div class="feature-item">
+                            <div class="feature-icon">
+                                <i class="fas fa-leaf"></i>
+                            </div>
+                            <h4>Sustainable</h4>
+                            <p>Eco-friendly farming practices that protect the environment</p>
+                        </div>
+                        <div class="feature-item">
+                            <div class="feature-icon">
+                                <i class="fas fa-heart"></i>
+                            </div>
+                            <h4>Healthy</h4>
+                            <p>No antibiotics or hormones, just natural goodness</p>
+                        </div>
+                        <div class="feature-item">
+                            <div class="feature-icon">
+                                <i class="fas fa-award"></i>
+                            </div>
+                            <h4>Quality</h4>
+                            <p>We ensure optimum quality of chicks by timely vaccination and close monitoring of illness</p>
+                        </div>
+                        <div class="feature-item">
+                            <div class="feature-icon">
+                                <i class="fas fa-lightbulb"></i>
+                            </div>
+                            <h4>Innovation</h4>
+                            <p>We continuously improve our methods through research and technology to enhance animal welfare and product quality.</p>
+                        </div>
+                    </div>
+                    <p><a href="about.html">Learn more about us</a></p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Products Section -->
+    <section class="products" id="products">
+        <div class="container">
+            <div class="section-title">
+                <h2>Our Products</h2>
+                <p>Premium poultry products for your farming</p>
+            </div>
+            <div class="product-grid">
+                <div class="product-card">
+                    <div class="product-image">
+                        <img src="images/about1.jpeg"
+                            alt="Day 1 Chicks">
+                    </div>
+                    <div class="product-info">
+                        <h3>Day 1 Chicks</h3>
+                        <p>Newly hatched chicks one day old already received their first vaccination</p>
+                        <span class="product-price">KES 100 per chick</span>
+                        <a href="contact.html" class="btn primary-btn">Order Now</a>
+                    </div>
+                </div>
+                <div class="product-card">
+                    <div class="product-image">
+                        <img src="https://images.unsplash.com/photo-1607619056574-7b8d3ee536b2?ixlib=rb-1.2.1&auto=format&fit=crop&w=1350&q=80"
+                            alt="1 Week Chicks">
+                    </div>
+                    <div class="product-info">
+                        <h3>1 Week Chicks</h3>
+                        <p>Naturally raised 7 days chicks with excellent health, as we make sure to administer the second vaccine dose.</p>
+                        <span class="product-price">KES 130 each</span>
+                        <a href="contact.html" class="btn primary-btn">Order Now</a>
+                    </div>
+                </div>
+                <div class="product-card">
+                    <div class="product-image">
+                        <img src="https://images.unsplash.com/photo-1603133872878-684f208fb84b?ixlib=rb-1.2.1&auto=format&fit=crop&w=1350&q=80"
+                            alt="2 weeks chicks">
+                    </div>
+                    <div class="product-info">
+                        <h3>2 weeks chicks</h3>
+                        <p>Healthy 2 weeks old chicks, administered with their third vaccine dose with vitamin suppliments to ensure good health and faster growth.</p>
+                        <span class="product-price">KES 160 per chick</span>
+                        <a href="contact.html" class="btn primary-btn">Order Now</a>
+                    </div>
+                </div>
+                <div class="product-card">
+                    <div class="product-image">
+                        <img src="https://images.unsplash.com/photo-1603133872878-684f208fb84b?ixlib=rb-1.2.1&auto=format&fit=crop&w=1350&q=80"
+                            alt="2 weeks chicks">
+                    </div>
+                    <div class="product-info">
+                        <h3>2 weeks chicks</h3>
+                        <p>Healthy 2 weeks old chicks, administered with their third vaccine dose with vitamin suppliments to ensure good health and faster growth.</p>
+                        <span class="product-price">KES 160 per chick</span>
+                        <a href="contact.html" class="btn primary-btn">Order Now</a>
+                    </div>
+                </div>
+                <div class="product-card">
+                    <div class="product-image">
+                        <img src="https://images.unsplash.com/photo-1603133872878-684f208fb84b?ixlib=rb-1.2.1&auto=format&fit=crop&w=1350&q=80"
+                            alt="2 weeks chicks">
+                    </div>
+                    <div class="product-info">
+                        <h3>2 weeks chicks</h3>
+                        <p>Healthy 2 weeks old chicks, administered with their third vaccine dose with vitamin suppliments to ensure good health and faster growth.</p>
+                        <span class="product-price">KES 160 per chick</span>
+                        <a href="contact.html" class="btn primary-btn">Order Now</a>
+                    </div>
+                </div>
+                <div class="product-card">
+                    <div class="product-image">
+                        <img src="https://images.unsplash.com/photo-1603133872878-684f208fb84b?ixlib=rb-1.2.1&auto=format&fit=crop&w=1350&q=80"
+                            alt="2 weeks chicks">
+                    </div>
+                    <div class="product-info">
+                        <h3>2 weeks chicks</h3>
+                        <p>Healthy 2 weeks old chicks, administered with their third vaccine dose with vitamin suppliments to ensure good health and faster growth.</p>
+                        <span class="product-price">KES 160 per chick</span>
+                        <a href="contact.html" class="btn primary-btn">Order Now</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Testimonials Section -->
+    <section class="testimonials">
+        <div class="container">
+            <div class="section-title">
+                <h2>What Our Customers Say</h2>
+                <p>Hear from people who love our birds</p>
+            </div>
+            <div class="testimonial-slider">
+                <div class="testimonial-item active">
+                    <p class="testimonial-text">Uwezo Farm's chicks are the best I've ever purchased! The chicks are so healthy
+                        and strong, and I love knowing they come from happy, healthy chickens.</p>
+                    <div class="testimonial-author">
+                        <div class="author-image">
+                            <img src="https://randomuser.me/api/portraits/women/44.jpg" alt="Sarah.">
+                        </div>
+                        <div class="author-info">
+                            <h4>Sarah</h4>
+                            <p>Ruiru Resident</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="testimonial-item">
+                    <p class="testimonial-text">As a restaurant owner, quality ingredients are everything. Uwezo Farm
+                        consistently provides the best poultry chicks that soon grow big enough for plenty of flavourful meat. Our customers can taste the
+                        difference!</p>
+                    <div class="testimonial-author">
+                        <div class="author-image">
+                            <img src="https://randomuser.me/api/portraits/men/32.jpg" alt="James">
+                        </div>
+                        <div class="author-info">
+                            <h4>James</h4>
+                            <p>Restaurant Owner</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="testimonial-item">
+                    <p class="testimonial-text">The chicks from Uwezo Farm is so agile and disease-resistant. I appreciate
+                        their commitment to sustainable farming and animal welfare. It's worth every shilling!</p>
+                    <div class="testimonial-author">
+                        <div class="author-image">
+                            <img src="https://randomuser.me/api/portraits/women/68.jpg" alt="Amina ">
+                        </div>
+                        <div class="author-info">
+                            <h4>Amina </h4>
+                            <p>Machakos farmer</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="testimonial-nav">
+                    <div class="testimonial-dot active" data-index="0"></div>
+                    <div class="testimonial-dot" data-index="1"></div>
+                    <div class="testimonial-dot" data-index="2"></div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Call to Action -->
+    <section class="cta">
+        <div class="container">
+            <h2>Ready to Experience the Difference?</h2>
+            <p>Join hundreds of satisfied customers who enjoy our premium poultry products every day.</p>
+            <div class="cta-btns">
+                <a href="products.html" class="btn primary-btn">View Products</a>
+                <a href="contact.html" class="btn secondary-btn">Contact Us</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-col">
+                    <h3>About Uwezo</h3>
+                    <p>Uwezo Poultry Farm is committed to providing the highest quality poultry products through
+                        sustainable farming practices that prioritize animal welfare and environmental stewardship.</p>
+                    <div class="social-links">
+                        <a href="#"><i class="fab fa-facebook-f"></i></a>
+                        <a href="#"><i class="fab fa-twitter"></i></a>
+                        <a href="#"><i class="fab fa-instagram"></i></a>
+                        <a href="#"><i class="fab fa-youtube"></i></a>
+                    </div>
+                </div>
+                <div class="footer-col">
+                    <h3>Quick Links</h3>
+                    <ul class="quick-links">
+                        <li><a href="index.html"><i class="fas fa-chevron-right"></i> Home</a></li>
+                        <li><a href="about.html"><i class="fas fa-chevron-right"></i> About Us</a></li>
+                        <li><a href="products.html"><i class="fas fa-chevron-right"></i> Our Products</a></li>
+                        <li><a href="contact.html"><i class="fas fa-chevron-right"></i> Contact Us</a></li>
+                        <li><a href="#"><i class="fas fa-chevron-right"></i> Farm Tours</a></li>
+                    </ul>
+                </div>
+                <div class="footer-col">
+                    <h3>Contact Info</h3>
+                    <ul class="contact-info-footer">
+                        <li>
+                            <i class="fas fa-map-marker-alt"></i>
+                            <span class="contact-text-footer">Muguga<br>Thika, Kenya</span>
+                        </li>
+                        <li>
+                            <i class="fas fa-phone-alt"></i>
+                            <span class="contact-text-footer">
+                                <a href="tel:+254712345678">+254 720991149</a><br>
+                            </span>
+                        </li>
+                        <li>
+                            <i class="fas fa-envelope"></i>
+                            <span class="contact-text-footer">
+                                <a href="mailto:info@uwezofarm.com">info@uwezofarm.com</a><br>
+                                <a href="mailto:sales@uwezofarm.com">sales@uwezofarm.com</a>
+                            </span>
+                        </li>
+                    </ul>
+                </div>
+                <div class="footer-col">
+                    <h3>Newsletter</h3>
+                    <p>Subscribe to our newsletter for farm updates, special offers, and poultry care tips.</p>
+                    <form class="newsletter-form">
+                        <input type="email" placeholder="Enter your email">
+                        <button type="submit">Subscribe</button>
+                    </form>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2025 Uwezo Poultry Farm. All Rights Reserved. | Designed with <i class="fas fa-heart"
+                        style="color: var(--primary);"></i> for happy chickens</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="js/index.js"></script>
+</body>
+
+</html>

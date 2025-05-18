@@ -1,0 +1,299 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>About Us - Uwezo Poultry Farm</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&family=Playfair+Display:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="css/about.css">
+</head>
+<style>
+    /* Page Banner */
+.page-banner {
+    height: 700px;
+    background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.9)), url('images/about.jpeg') center/cover no-repeat;
+    display: flex;
+    align-items: center;
+    text-align: center;
+    color: white;
+    margin-top: 30px;
+}
+
+.page-banner h1 {
+    font-size: 3.5rem;
+    margin-bottom: 20px;
+    animation: fadeInUp 1s ease;
+}
+
+.breadcrumb {
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+}
+
+.breadcrumb a {
+    color: white;
+    text-decoration: none;
+    transition: color 0.3s;
+}
+
+.breadcrumb a:hover {
+    color: var(--secondary);
+}
+
+.breadcrumb span {
+    color: var(--secondary);
+}
+.cta{
+    background: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)), url('images/hens.jpg') center/cover no-repeat;
+
+}
+</style>
+<body>
+    <!-- Header -->
+    <header id="header">
+        <div class="container header-container">
+            <a href="index.html" class="logo">
+                <img src="images/logo.png" alt="Uwezo Poultry Farm Logo" style="height: 40px; margin-right: 10px;">
+                Uwezo <span>Poultry Farm</span>
+            </a>
+            <button class="open-btn" onclick="openNav()"><i class="fas fa-bars"></i></button>
+        </div>
+    </header>
+    <!-- Sidebar Navigation -->
+    <div id="sidebar" class="sidebar">
+        <button class="close-btn" onclick="closeNav()">&times;</button>
+        <a href="index.html">Home</a>
+        <a href="about.html">About Us</a>
+        <a href="products.html">Our Products</a>
+        <a href="contact.html">Contact Us</a>
+    </div>
+
+    <!-- Page Banner -->
+    <section class="page-banner">
+        <div class="container">
+            <h1>About Our Farm</h1>
+            <div class="breadcrumb">
+                <a href="index.html">Home</a>
+                <span>/</span>
+                <a href="about.html">About Us</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- About Intro -->
+    <section class="about-intro">
+        <div class="container">
+            <div class="about-intro-content">
+                <div class="about-intro-img">
+                    <img src="images/logo.png" alt="Our Farm">
+                </div>
+                <div class="about-intro-text">
+                    <h3>Our Story</h3>
+                    <p>Founded in 2010, Uwezo Poultry Farm began as a small family operation with just 50 chickens. What started as a passion project quickly grew into a thriving business as word spread about the exceptional quality of our poultry products.</p>
+                    <p>Today, we operate a state-of-the-art facility spanning 50 acres, where we raise over 10,000 chickens using sustainable, ethical farming practices. Our commitment to quality and animal welfare has made us a trusted name in the region.</p>
+                    <p>We take pride in being a family-run business that values tradition while embracing innovation to deliver the best products to our customers.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Our Values -->
+    <section class="our-values">
+        <div class="container">
+            <div class="section-title">
+                <h2>Our Values</h2>
+            </div>
+            <div class="values-grid">
+                <div class="value-card">
+                    <div class="value-icon">
+                        <i class="fas fa-heart"></i>
+                    </div>
+                    <h3>Animal Welfare</h3>
+                    <p>We prioritize the health and happiness of our chickens, providing them with spacious living conditions and a natural diet.</p>
+                </div>
+                <div class="value-card">
+                    <div class="value-icon">
+                        <i class="fas fa-leaf"></i>
+                    </div>
+                    <h3>Sustainability</h3>
+                    <p>Our farming practices minimize environmental impact through renewable energy, waste reduction, and responsible land management.</p>
+                </div>
+                <div class="value-card">
+                    <div class="value-icon">
+                        <i class="fas fa-award"></i>
+                    </div>
+                    <h3>Quality</h3>
+                    <p>From farm to table, we maintain the highest standards to ensure our products are nutritious, delicious, and safe.</p>
+                </div>
+                <div class="value-card">
+                    <div class="value-icon">
+                        <i class="fas fa-handshake"></i>
+                    </div>
+                    <h3>Community</h3>
+                    <p>We support local businesses, provide jobs in our community, and educate future farmers about sustainable practices.</p>
+                </div>
+                <div class="value-card">
+                    <div class="value-icon">
+                        <i class="fas fa-lightbulb"></i>
+                    </div>
+                    <h3>Innovation</h3>
+                    <p>We continuously improve our methods through research and technology to enhance animal welfare and product quality.</p>
+                </div>
+                <div class="value-card">
+                    <div class="value-icon">
+                        <i class="fas fa-star"></i>
+                    </div>
+                    <h3>Transparency</h3>
+                    <p>We welcome visitors to see our operations firsthand and maintain open communication about our farming practices.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Our Team -->
+    <section class="our-team">
+        <div class="container">
+            <div class="section-title">
+                <h2>Meet Our Team</h2>
+            </div>
+            <div class="team-grid">
+                <div class="team-member">
+                    <div class="team-img">
+                        <img src="https://images.unsplash.com/photo-1560250097-0b93528c311a?ixlib=rb-1.2.1&auto=format&fit=crop&w=634&q=80" alt="John Kamau">
+                    </div>
+                    <div class="team-info">
+                        <h3>John Kamau</h3>
+                        <p>Founder & CEO</p>
+                        <div class="team-social">
+                            <a href="#"><i class="fab fa-facebook-f"></i></a>
+                            <a href="#"><i class="fab fa-twitter"></i></a>
+                            <a href="#"><i class="fab fa-linkedin-in"></i></a>
+                        </div>
+                    </div>
+                </div>
+                <div class="team-member">
+                    <div class="team-img">
+                        <img src="https://images.unsplash.com/photo-1573496359142-b8d87734a5a2?ixlib=rb-1.2.1&auto=format&fit=crop&w=634&q=80" alt="Mary Wanjiku">
+                    </div>
+                    <div class="team-info">
+                        <h3>Mary Wanjiku</h3>
+                        <p>Farm Manager</p>
+                        <div class="team-social">
+                            <a href="#"><i class="fab fa-facebook-f"></i></a>
+                            <a href="#"><i class="fab fa-twitter"></i></a>
+                            <a href="#"><i class="fab fa-linkedin-in"></i></a>
+                        </div>
+                    </div>
+                </div>
+                <div class="team-member">
+                    <div class="team-img">
+                        <img src="https://images.unsplash.com/photo-1551836022-d5d88e9218df?ixlib=rb-1.2.1&auto=format&fit=crop&w=634&q=80" alt="David Ochieng">
+                    </div>
+                    <div class="team-info">
+                        <h3>David Ochieng</h3>
+                        <p>Veterinary Specialist</p>
+                        <div class="team-social">
+                            <a href="#"><i class="fab fa-facebook-f"></i></a>
+                            <a href="#"><i class="fab fa-twitter"></i></a>
+                            <a href="#"><i class="fab fa-linkedin-in"></i></a>
+                        </div>
+                    </div>
+                </div>
+                <div class="team-member">
+                    <div class="team-img">
+                        <img src="https://images.unsplash.com/photo-1573497019940-1c28c88b4f3e?ixlib=rb-1.2.1&auto=format&fit=crop&w=634&q=80" alt="Grace Muthoni">
+                    </div>
+                    <div class="team-info">
+                        <h3>Grace Muthoni</h3>
+                        <p>Sales & Marketing</p>
+                        <div class="team-social">
+                            <a href="#"><i class="fab fa-facebook-f"></i></a>
+                            <a href="#"><i class="fab fa-twitter"></i></a>
+                            <a href="#"><i class="fab fa-linkedin-in"></i></a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Call to Action -->
+    <section class="cta">
+        <div class="container">
+            <h2>Experience the Uwezo Difference</h2>
+            <p>Join our growing family of satisfied customers who appreciate the quality and care that goes into every product we offer. Taste the difference that ethical, sustainable farming makes.</p>
+            <div class="cta-btns">
+                <a href="products.html" class="btn primary-btn">View Our Products</a>
+                <a href="contact.html" class="btn secondary-btn">Schedule a Farm Tour</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-col">
+                    <h3>About Uwezo</h3>
+                    <p>Uwezo Poultry Farm is committed to providing the highest quality poultry products through sustainable farming practices that prioritize animal welfare and environmental stewardship.</p>
+                    <div class="social-links">
+                        <a href="#"><i class="fab fa-facebook-f"></i></a>
+                        <a href="#"><i class="fab fa-twitter"></i></a>
+                        <a href="#"><i class="fab fa-instagram"></i></a>
+                        <a href="#"><i class="fab fa-youtube"></i></a>
+                    </div>
+                </div>
+                <div class="footer-col">
+                    <h3>Quick Links</h3>
+                    <ul class="quick-links">
+                        <li><a href="index.html"><i class="fas fa-chevron-right"></i> Home</a></li>
+                        <li><a href="about.html"><i class="fas fa-chevron-right"></i> About Us</a></li>
+                        <li><a href="products.html"><i class="fas fa-chevron-right"></i> Our Products</a></li>
+                        <li><a href="contact.html"><i class="fas fa-chevron-right"></i> Contact Us</a></li>
+                        <li><a href="#"><i class="fas fa-chevron-right"></i> Farm Tours</a></li>
+                        <li><a href="#"><i class="fas fa-chevron-right"></i> Recipes</a></li>
+                    </ul>
+                </div>
+                <div class="footer-col">
+                    <h3>Contact Info</h3>
+                    <ul class="contact-info-footer">
+                        <li>
+                            <i class="fas fa-map-marker-alt"></i>
+                            <span class="contact-text-footer">123 Farm Road, Poultry District<br>Nairobi, Kenya</span>
+                        </li>
+                        <li>
+                            <i class="fas fa-phone-alt"></i>
+                            <span class="contact-text-footer">
+                                <a href="tel:+254712345678">+254 712 345 678</a><br>
+                                <a href="tel:+254723456789">+254 723 456 789</a>
+                            </span>
+                        </li>
+                        <li>
+                            <i class="fas fa-envelope"></i>
+                            <span class="contact-text-footer">
+                                <a href="mailto:info@uwezofarm.com">info@uwezofarm.com</a><br>
+                                <a href="mailto:sales@uwezofarm.com">sales@uwezofarm.com</a>
+                            </span>
+                        </li>
+                    </ul>
+                </div>
+                <div class="footer-col">
+                    <h3>Newsletter</h3>
+                    <p>Subscribe to our newsletter for farm updates, special offers, and poultry care tips.</p>
+                    <form class="newsletter-form">
+                        <input type="email" placeholder="Enter your email">
+                        <button type="submit">Subscribe</button>
+                    </form>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2023 Uwezo Poultry Farm. All Rights Reserved. | Designed with <i class="fas fa-heart" style="color: var(--primary);"></i> for happy chickens</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="js/about.js"></script>
+</body>
+</html>
