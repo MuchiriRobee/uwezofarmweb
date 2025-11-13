@@ -619,15 +619,7 @@ footer {
 }
 
 /* Responsive Styles */
-@media (max-width: 992px) {
-    .about-intro-content {
-        flex-direction: column;
-    }
-    
-    .about-intro-img, .about-intro-text {
-        transform: none !important;
-    }
-}
+
 
 @media (max-width: 768px) {
     .page-banner h1 {
