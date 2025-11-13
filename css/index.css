@@ -95,7 +95,7 @@ header.scrolled {
 .sidebar {
     height: 100%;
     width: 0;
-    position: fixed;
+    position: relative;
     z-index: 1001;
     top: 0;
     right: 0;
