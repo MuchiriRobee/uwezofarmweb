@@ -662,3 +662,15 @@ footer {
         font-size: 2rem;
     }
 }
+@media (max-width: 480px) {
+    .sidebar.open {
+        width: 80vw !important; /* 80% of viewport width */
+        max-width: 280px; /* Cap at 280px */
+    }
+}
+
+@media (min-width: 481px) {
+    .sidebar.open {
+        width: 300px !important;
+    }
+}

@@ -1,10 +1,14 @@
 // Sidebar Navigation
 function openNav() {
-    document.getElementById("sidebar").style.width = "300px";
+    const sidebar = document.getElementById("sidebar");
+    sidebar.classList.add("open");
+    sidebar.style.width = ""; // Let CSS control the width
 }
 
 function closeNav() {
-    document.getElementById("sidebar").style.width = "0";
+    const sidebar = document.getElementById("sidebar");
+    sidebar.classList.remove("open");
+    sidebar.style.width = "0";
 }
 
 // Scroll effect for header
