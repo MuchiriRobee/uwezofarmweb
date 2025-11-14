@@ -91,7 +91,7 @@ header.scrolled {
     background: none;
     border: none;
     transition: transform 0.3s;
-    padding-right:20px;
+    
 }
 
 .open-btn:hover {
@@ -814,7 +814,9 @@ footer {
     .cta-btns {
         flex-direction: column;
     }
-
+    .open-btn{
+        padding-right:20px;
+    }
     .secondary-btn {
         margin-left: 0;
         margin-top: 15px;
