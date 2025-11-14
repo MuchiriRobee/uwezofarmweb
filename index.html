@@ -10,173 +10,6 @@
         href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&family=Playfair+Display:wght@400;500;600;700&display=swap"
         rel="stylesheet">
         <link rel="stylesheet" href="css/index.css">
-    <style>
-        /* Sidebar Navigation */
-.sidebar {
-    height: 100%;
-    width: 0;
-    position: fixed;
-    z-index: 1001;
-    top: 0;
-    right: 0;
-    background-color: var(--primary);
-    overflow-x: hidden;
-    transition: 0.5s;
-    padding-top: 80px;
-    box-sizing: border-box; /* Ensures padding doesn't add to width */
-}
-
-.sidebar a {
-    padding: 15px 25px;
-    text-decoration: none;
-    font-size: 1.2rem;
-    color: white;
-    display: block;
-    transition: 0.3s;
-    border-bottom: 1px solid rgba(255, 255, 255, 0.1);
-    position: relative;
-    overflow: hidden;
-}
-
-.sidebar a::before {
-    content: '';
-    position: absolute;
-    top: 0;
-    left: -100%;
-    width: 100%;
-    height: 100%;
-    background: rgba(255, 255, 255, 0.1);
-    transition: 0.5s;
-}
-
-.sidebar a:hover::before {
-    left: 0;
-}
-
-.sidebar .close-btn {
-    position: absolute;
-    top: 20px;
-    right: 25px;
-    font-size: 2rem;
-    color: white;
-    background: none;
-    border: none;
-    cursor: pointer;
-}
-.sidebar-backdrop {
-    display: none;
-    position: fixed;
-    top: 0;
-    left: 0;
-    width: 100vw;
-    height: 100vh;
-    background-color: rgba(0, 0, 0, 0.5);
-    z-index: 1000;
-    opacity: 0;
-    transition: opacity 0.3s ease;
-}
-
-.sidebar.open ~ .sidebar-backdrop {
-    display: block;
-    opacity: 1;
-}
-       /* Hero Carousel */
-.hero {
-    height: 900px;
-    position: relative;
-    overflow: hidden;
-}
-
-.carousel {
-    height: 100%;
-    position: relative;
-}
-
-.carousel-inner {
-    height: 100%;
-    position: relative;
-    overflow: hidden;
-}
-
-.carousel-item {
-    height: 100%;
-    width: 100%;
-    position: absolute;
-    top: 0;
-    left: 0;
-    opacity: 0;
-    transition: opacity 1s ease-in-out;
-    background-size: cover;
-    background-position: center;
-}
-
-.carousel-item.active {
-    opacity: 1;
-}
-
-.carousel-item:nth-child(1) {
-    background-image: linear-gradient(rgba(0, 0, 0, 0.1), rgba(0, 0, 0, 0.9)), url('images/about.jpeg') ;
-}
-
-.carousel-item:nth-child(2) {
-    background-image: linear-gradient(rgba(0, 0, 0, 0.1), rgba(0, 0, 0, 0.9)), url('images/chicken.jpg');
-}
-
-.carousel-item:nth-child(3) {
-    background-image: linear-gradient(rgba(0, 0, 0, 0.1), rgba(0, 0, 0, 0.9)), url('images/hens.jpg');
-}
-
-.hero-content {
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    text-align: center;
-    color: white;
-    width: 100%;
-    padding: 0 20px;
-    z-index: 10;
-}
-
-.hero-content h1 {
-    font-size: 3.5rem;
-    margin-bottom: 20px;
-    animation: fadeInUp 1s ease;
-}
-
-.hero-content p {
-    font-size: 1.2rem;
-    margin-bottom: 30px;
-    max-width: 700px;
-    margin-left: auto;
-    margin-right: auto;
-    line-height: 1.6;
-}
-
-.carousel-controls {
-    position: absolute;
-    bottom: 30px;
-    left: 50%;
-    transform: translateX(-50%);
-    display: flex;
-    gap: 10px;
-    z-index: 10;
-}
-
-.carousel-indicator {
-    width: 12px;
-    height: 12px;
-    border-radius: 50%;
-    background-color: rgba(255, 255, 255, 0.5);
-    cursor: pointer;
-    transition: all 0.3s ease;
-}
-
-.carousel-indicator.active {
-    background-color: white;
-    transform: scale(1.2);
-}
-    </style>
 </head>
 
 <body>
@@ -313,7 +146,7 @@
                 </div>
                 <div class="product-card">
                     <div class="product-image">
-                        <img src="https://images.unsplash.com/photo-1607619056574-7b8d3ee536b2?ixlib=rb-1.2.1&auto=format&fit=crop&w=1350&q=80"
+                        <img src="images/1week-chicks.jpg"
                             alt="1 Week Chicks">
                     </div>
                     <div class="product-info">
@@ -325,7 +158,7 @@
                 </div>
                 <div class="product-card">
                     <div class="product-image">
-                        <img src="https://images.unsplash.com/photo-1603133872878-684f208fb84b?ixlib=rb-1.2.1&auto=format&fit=crop&w=1350&q=80"
+                        <img src="images/2weeks-chicks.jpg"
                             alt="2 weeks chicks">
                     </div>
                     <div class="product-info">
@@ -337,13 +170,13 @@
                 </div>
                 <div class="product-card">
                     <div class="product-image">
-                        <img src="https://images.unsplash.com/photo-1603133872878-684f208fb84b?ixlib=rb-1.2.1&auto=format&fit=crop&w=1350&q=80"
-                            alt="2 weeks chicks">
+                        <img src="images/3weeks-chicks.jpeg"
+                            alt="3 weeks chicks">
                     </div>
                     <div class="product-info">
-                        <h3>2 weeks chicks</h3>
-                        <p>Healthy 2 weeks old chicks, administered with their third vaccine dose with vitamin suppliments to ensure good health and faster growth.</p>
-                        <span class="product-price">KES 160 per chick</span>
+                        <h3>3 weeks chicks</h3>
+                        <p>Strong and healthy 3 week old chicks, already vaccined with Gumboro Disease vaccine and Newcastle IB vaccine completely and free of all illness.</p>
+                        <span class="product-price">KES 190 per chick</span>
                         <a href="contact.html" class="btn primary-btn">Order Now</a>
                     </div>
                 </div>
